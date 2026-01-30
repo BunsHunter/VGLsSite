@@ -48,63 +48,6 @@ nav ul li a:hover {
     display: none;
 }
 
-@media (max-width: 900px){
-    nav{
-        padding: 1.3rem 2rem;
-        flex-wrap: wrap;
-    }
-
-    .menu-icon{
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    nav ul{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-
-        /* 🔥 animasi */
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.35s ease;
-    }
-
-    nav ul li a{ 
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid black;
-    }
-    
-
-    nav ul.active{
-        max-height: 300px; /* cukup buat menu */
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .hero-banner {
-    width: 100%;
-    margin: 4rem;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid black;
-    /* Biar responsive 16:9 */
-    aspect-ratio: 16 / 9;
-    }
-
-    .content-orientation{
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    font-family: Open Sans;
-    font-size: 14px;
-    }
-}
 
 .hero-banner {
     width: 90%;
@@ -153,4 +96,57 @@ nav ul li a:hover {
     align-items: center;
     font-family: Open Sans;
     font-size: 24px;
+}
+
+@media (max-width: 900px){
+    nav{
+        padding: 1.3rem 2rem;
+        flex-wrap: wrap;
+    }
+
+    .menu-icon{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        /* 🔥 animasi */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.35s ease;
+    }
+
+    nav ul li a{ 
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+    
+
+    nav ul.active{
+        max-height: 300px; /* cukup buat menu */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hero-banner {
+    width: 100%;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    /* Biar responsive 16:9 */
+    aspect-ratio: 16 / 9;
+    }
+
+    .content-orientation{
+        font-size: 18px;
+    }
 }
