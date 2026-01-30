@@ -1,0 +1,80 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 10rem;
+    border-bottom: 1px solid black;
+}
+
+nav div img{
+    width: 200px;
+    height: auto;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    list-style: none;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Open Sans;
+    padding: 10px;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+nav ul li a:hover {
+    color: rgb(57, 159, 255);
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media (max-width: 900px){
+    nav{
+        padding: 1.3rem 2rem;
+        flex-wrap: wrap;
+    }
+
+    .menu-icon{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        /* 🔥 animasi */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.35s ease;
+    }
+
+    nav ul.active{
+        max-height: 300px; /* cukup buat menu */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
