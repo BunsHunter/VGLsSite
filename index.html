@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div>
-            <img src="Source/image/Logo/logoipsum-408.png" alt="VGLs Logo">
+            <img src="Asset/image/Logo/logoipsum-408.png" alt="VGLs Logo">
         </div>
         <div class="menu-icon">
             <span class="material-symbols-outlined">menu</span>
@@ -33,6 +33,21 @@
             </li>
         </ul>
     </nav>
+
+    <div class="slides">
+        <section class="hero-banner">
+            <div class="slide active">
+                <img src="https://placehold.co/1600x900?text=Hero+1" alt="Hero 1">
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1600x900?text=Hero+2" alt="Hero 2">
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1600x900?text=Hero+3" alt="Hero 3">
+            </div>
+        </section>
+    </div>
+
 </body>
 <script>
 const menuIcon = document.querySelector('.menu-icon');
@@ -41,5 +56,23 @@ const navMenu = document.querySelector('nav ul');
 menuIcon.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function showSlide(index){
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+    });
+    slides[index].classList.add('active');
+}
+
+function nextSlide(){
+    currentIndex++;
+    if(currentIndex >= slides.length) currentIndex = 0;
+    showSlide(currentIndex);
+}
+
+// ganti slide tiap 3 detik
+setInterval(nextSlide, 5000);
 </script>
 </html>
